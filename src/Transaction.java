@@ -32,7 +32,7 @@ public class Transaction {
         return category;
     }
 
-    public LocalDate getTransactionLocalTime(){
+    public LocalDate getTransactionLocalDate(){
         return date;
     }
 

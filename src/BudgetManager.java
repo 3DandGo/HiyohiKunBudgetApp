@@ -40,6 +40,10 @@ public class BudgetManager {
         return total;
     }
 
+    public double getBalance(){
+        return getTotalIncome() - getTotalExpenses();
+    }
+
    public List<Transaction> getTransactionByCategory(String category){
         List<Transaction> total = new ArrayList<>();
 
@@ -53,12 +57,12 @@ public class BudgetManager {
         return total;
    }
 
-   /*
+
    public List<Transaction> searchByName(String keyword){
         List<Transaction> results = new ArrayList<>();
 
         for (Transaction t : transactions){
-            if(t.getName().toLowerCase().contains(keyword.toLowerCase())){
+            if(t.getTransactionName().toLowerCase().contains(keyword.toLowerCase())){
                 results.add(t);
             }
         }
@@ -70,11 +74,11 @@ public class BudgetManager {
 
         for(Transaction t : transactions)
         {
-            if(t.getCategory().toLowerCase().contains(keyword.toLowerCase())){
+            if(t.getTransactionCategory().toLowerCase().contains(keyword.toLowerCase())){
                 results.add(t);
             }
         }
         return results;
     }
-    */
+
 }
